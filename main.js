@@ -14,12 +14,16 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 3000);
 camera.position.set(100, 100, 100);
 
-const path = './assets/Bridge2/';
-const format = '.jpg';
+import posxUrl from './assets/Bridge2/posx.jpg'
+import negxUrl from './assets/Bridge2/negx.jpg'
+import posyUrl from './assets/Bridge2/posy.jpg'
+import negyUrl from './assets/Bridge2/negy.jpg'
+import poszUrl from './assets/Bridge2/posz.jpg'
+import negzUrl from './assets/Bridge2/negz.jpg'
 const urls = [
-  path + 'posx' + format, path + 'negx' + format,
-  path + 'posy' + format, path + 'negy' + format,
-  path + 'posz' + format, path + 'negz' + format
+  posxUrl, negxUrl,
+  posyUrl, negyUrl,
+  poszUrl, negzUrl
 ];
 const textureCube = new THREE.CubeTextureLoader().load( urls );
 scene.background = textureCube;
