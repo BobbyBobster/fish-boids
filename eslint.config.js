@@ -1,5 +1,6 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
+import { warn } from "console";
 
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -8,4 +9,9 @@ export default [
     { ignores: ["dist/**", "assets/**"] },
     { languageOptions: { sourceType: "module", globals: globals.browser } },
     pluginJs.configs.recommended,
+    {
+        rules: {
+            "no-unused-vars": "warn"
+        }
+    }
 ];
